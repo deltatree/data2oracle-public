@@ -1,0 +1,38 @@
+name: uke
+services:
+  uke:
+    image: ${UKE_IMAGE:?UKE_IMAGE mit vollständigem Image-Namen und Tag setzen}
+    container_name: ${UKE_CONTAINER:-uke-engine}
+    user: "${UKE_UID:?UKE_UID mit id -u setzen}:${UKE_GID:?UKE_GID mit id -g setzen}"
+    environment:
+      UKE_TRUSTED_INPUTS: ${UKE_TRUSTED_INPUTS-0}
+    network_mode: none
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges]
+    cpus: 4
+    mem_limit: 8g
+    memswap_limit: 8g
+    pids_limit: 256
+    restart: unless-stopped
+    stop_grace_period: ${UKE_STOP_TIMEOUT:-150}s
+    tmpfs:
+      - /run/uke:rw,nosuid,nodev,size=2g,mode=700,${UKE_TMPFS_OWNER:?Für Docker uid=UID,gid=GID setzen; für Podman U setzen}
+    volumes:
+      - type: bind
+        source: ${UKE_DATA_DIR:?UKE_DATA_DIR als absoluten Pfad setzen}/documents
+        target: /data/documents
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ${UKE_DATA_DIR}/knowledge
+        target: /data/knowledge
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ${UKE_DATA_DIR}/models
+        target: /data/models
+        read_only: true
+        bind:
+          create_host_path: false

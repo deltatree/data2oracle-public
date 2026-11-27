@@ -1,0 +1,15 @@
+#!/bin/sh
+set -eu
+if [ -t 0 ] && [ -t 1 ]; then
+ status_command=0
+ for argument in "$@"; do
+  case "$argument" in
+   status) status_command=1 ;;
+   -f|--follow)
+    if [ "$status_command" = 1 ]; then
+     exec "${UKE_RUNTIME:-docker}" exec -it "${UKE_CONTAINER:-uke-engine}" uke "$@"
+    fi ;;
+  esac
+ done
+fi
+exec "${UKE_RUNTIME:-docker}" exec "${UKE_CONTAINER:-uke-engine}" uke "$@"

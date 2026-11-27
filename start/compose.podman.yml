@@ -1,0 +1,3 @@
+services:
+  uke:
+    userns_mode: keep-id

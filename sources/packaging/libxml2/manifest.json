@@ -1,0 +1,16 @@
+{
+  "component": "libxml2",
+  "sha256": {
+    "changelog": "4a97b8db9ae9b10c4698dfa25fa6d98dfec53e20a542903d306ff3260e370328",
+    "copyright": "ee746b96cfa5be73c3ea3e4cfb1285e9b315d4c9267f99b2ee9c5d911d9fe3f4",
+    "patches/libxml2-uke-backport.patch": "76de5320e0c764fd4f3d9d2e5237d7fad4d5aaff7932c80637da08b10e1a4751",
+    "rebuild.sh": "3e31193e8c843595b851327528f616b50781f06d73bbb0be38b0fcd0d7fb48b4",
+    "regression.c": "592a52c3db435dff9d96b0340276440d81088666c93191152e64dcd8fdf091bc",
+    "sources/libxml2_2.12.7+dfsg+really2.9.14-2.1+deb13u3.debian.tar.xz": "3b6d265f482d6a8fbe3c056d2006fb3b563b4a838f7258b388ac5f0b29206921",
+    "sources/libxml2_2.12.7+dfsg+really2.9.14-2.1+deb13u3.dsc": "04b1da890535b11e3db231f39114ee09e643badceff79441d749d0ca78efaaa5",
+    "sources/libxml2_2.12.7+dfsg+really2.9.14.orig.tar.xz": "4fe913dec8b1ab89d13b489b419a8203176ea39e931eaa0d25b17eafb9c279e9",
+    "testdata.py": "161141c54e8c0b338003d15c12136b63a2e67458f8ac5d32287879641402f748"
+  },
+  "base_version": "2.12.7+dfsg+really2.9.14-2.1+deb13u3",
+  "builder": "debian@sha256:a72b4433de1cf7d6bae0c4cee74d0547f58601a643b3375f070c51600d63b6b2"
+}

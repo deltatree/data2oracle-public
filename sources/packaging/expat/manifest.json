@@ -1,0 +1,15 @@
+{
+  "component": "expat",
+  "sha256": {
+    "verify-runtime.py": "a3ec7bc24df53c541a899ed3ef2062bac9c7f4f8e8b3d5dcde5431af5af808a8",
+    "rebuild.sh": "6adb23f55b5e7960b5a210bde2b794f050100fef841030bcb6e073a1e702a613",
+    "build-packages.lock": "c83c4bf66049af523c679497f4d38f3c48ae2717da3f6550194b7ae69ca260ef",
+    "copyright": "60919fe1a156395ff14511bb6ff79756c50ade2fff59ac60c9bae1d8a7fe6292",
+    "verify-abi.py": "3c404859d7d0dc1bd9bcd76a65131e8de15bf687ed14e5961e17b78ed0e621ff",
+    "sources/expat_2.10.0-1.dsc": "8c4623c101959b8709a3f0a10c06a40d413dc7a6f5ffad3bc9d0cd010d850956",
+    "sources/expat_2.10.0.orig.tar.gz": "b3644a12f62d7762b62c444f69d169ba0234f13138d0240244bca64cbe35286f",
+    "sources/expat_2.10.0-1.debian.tar.xz": "9be65c3ff79ca0508590970422de0a55f117bb7134a0274dd1ed3261f85631dc"
+  },
+  "version": "2.10.0-1+uke1",
+  "base_image": "python:3.12.16-slim-trixie@sha256:05a994d2344eb364cc186910f4fc8786a38215f39f00d0acc25bff33a08f4177"
+}
